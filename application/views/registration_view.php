@@ -13,11 +13,13 @@
 <div class="reg_form">
 <div class="form_title">Sign Up</div>
 <div class="form_sub_title">It's free and anyone can join</div>
-<?php echo validation_errors('<p class="error">'); ?>
+<h1><?php echo validation_errors('<p class="error">'); ?> </h1>
+
+
 	<?php echo form_open("user/registration"); ?>
 		<p>
 			<label for="user_name">User Name:</label>
-			<input type="text" id="user_name" name="user_name" value="<?php echo set_value('user_name'); ?>" />
+			<input type="text" id="user_name" name="user_name" value="" />
 		</p>        
 		<p>
 			<label for="email_address">Your Email:</label>
@@ -29,7 +31,7 @@
 		</p>
 		<p>
 			<label for="con_password">Confirm Password:</label>
-			<input type="password" id="con_password" name="con_password" value="<?php echo set_value('con_password'); ?>" />
+			<input type="password" id="con_password" name="con_password" value="" />
 		</p>        
 		<p>
 			<input type="submit" class="greenButton" value="Submit" />

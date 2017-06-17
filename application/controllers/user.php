@@ -46,8 +46,9 @@ class User extends CI_Controller{
 	{
 		$this->load->library('form_validation');
 		// field name, error message, validation rules
-		$this->form_validation->set_rules('user_name', 'User Name', 'trim|required|min_length[4]|is_unique[user.username]');
-		$this->form_validation->set_rules('email_address', 'Your Email', 'trim|required|valid_email|xss_clean|is_unique[user.email]');
+		$this->form_validation->set_rules('user_name', 'User Name', 'trim|required|min_length[4]');
+		$this->form_validation->set_message('is_unique', 'EMAIL Nee me kon chai law');
+		$this->form_validation->set_rules('email_address', 'Your Email', 'trim|required|valid_email|is_unique[user.email]');		
 		$this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[4]|max_length[32]');
 		$this->form_validation->set_rules('con_password', 'Password Confirmation', 'trim|required|matches[password]');
 
